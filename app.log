@@ -1,0 +1,467 @@
+2025-07-30 15:24:23 [ERROR] Google API key not found. App cannot run.
+2025-07-30 15:24:47 [ERROR] Google API key not found. App cannot run.
+2025-07-30 15:24:49 [ERROR] Google API key not found. App cannot run.
+2025-07-30 15:25:27 [INFO] ===== Streamlit App Started =====
+2025-07-30 15:25:34 [INFO] ===== Streamlit App Started =====
+2025-07-30 15:25:38 [INFO] ===== Streamlit App Started =====
+2025-07-30 15:25:38 [INFO] User question: hi
+2025-07-30 15:25:38 [INFO] Reading PDF: Neutrino-Tech-Systems-Handbook.pdf
+2025-07-30 15:25:39 [INFO] Splitting text into chunks...
+2025-07-30 15:25:39 [INFO] Loading existing FAISS index from faiss_index_af09d7f44457d1fdd6cd0113310366f8
+2025-07-30 15:25:39 [INFO] Loading faiss with AVX2 support.
+2025-07-30 15:25:39 [INFO] Successfully loaded faiss with AVX2 support.
+2025-07-30 15:25:39 [INFO] Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-30 15:25:40 [INFO] Documents matched: 4
+2025-07-30 15:25:40 [INFO] Answer generated: The answer is not available in the provided context....
+2025-07-30 15:27:11 [INFO] ===== Streamlit App Started =====
+2025-07-30 15:27:11 [INFO] User question: hii
+2025-07-30 15:27:11 [INFO] Reading PDF: Neutrino-Tech-Systems-Handbook.pdf
+2025-07-30 15:27:12 [INFO] Splitting text into chunks...
+2025-07-30 15:27:12 [INFO] Loading existing FAISS index from faiss_index_af09d7f44457d1fdd6cd0113310366f8
+2025-07-30 15:27:12 [INFO] Documents matched: 4
+2025-07-30 15:27:13 [INFO] Answer generated: The answer is not available in the provided context....
+2025-07-30 15:30:00,987 - WARNING - User submitted question without uploading PDFs.
+2025-07-30 15:30:14,865 - INFO - User question: hi
+2025-07-30 15:30:32,247 - INFO - Answer generated: The answer is not available in the provided context....
+2025-07-30 15:32:17,719 - INFO - User question: hi
+2025-07-30 15:32:18,841 - INFO - Answer: Hi there! How can I help you today?...
+2025-07-30 15:32:58,011 - INFO - User question: what's day today
+2025-07-30 15:32:58,954 - INFO - Answer: Today is Wednesday, May 15, 2024....
+2025-07-30 15:33:29,379 - INFO - User question: who is the PM of India
+2025-07-30 15:33:30,170 - INFO - Answer: The current Prime Minister of India is Narendra Modi....
+2025-07-30 15:33:47,155 - INFO - User question: give 5 current news
+2025-07-30 15:33:50,153 - INFO - Answer: Okay, here are five current news headlines from around the world:
+
+1.  **Ukraine War:** Fighting rem...
+2025-07-30 15:34:28,976 - INFO - User question: 2025 news 
+2025-07-30 15:34:37,221 - INFO - Answer: Okay, I can give you some potential news scenarios for 2025, based on current trends and events.  It...
+2025-07-30 15:36:12,481 - INFO - User question: how long you update yourself 
+2025-07-30 15:36:13,515 - INFO - Answer: The models I use are constantly being updated, but I don't have a specific update schedule I can sha...
+2025-07-30 15:36:47,329 - INFO - User question: are you saving chat history 
+2025-07-30 15:36:49,977 - INFO - Answer: Whether or not chat history is saved depends on the platform or application I am being used on.
+
+*  ...
+2025-07-30 15:52:05,561 - INFO - Loading faiss with AVX2 support.
+2025-07-30 15:52:05,723 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-30 15:52:05,746 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-30 15:52:19,116 - INFO - User question: what is gen ai
+2025-07-30 15:53:18,050 - INFO - User question: what is neutrino tech system
+2025-07-30 16:01:33,507 - INFO - User question: summary of the pdf 
+2025-07-30 16:03:18,297 - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 The model is overloaded. Please try again later..
+2025-07-30 16:10:16,137 - ERROR - Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+Traceback (most recent call last):
+  File "D:\NTS_Tranning\chatbot\RAG-chatbot\app.py", line 86, in handle_user_query
+    answer = get_answer_from_vector_store(user_question, st.session_state.vector_store)
+  File "D:\NTS_Tranning\chatbot\RAG-chatbot\app.py", line 77, in get_answer_from_vector_store
+    return chain.run(input_documents=docs, question=query)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 632, in run
+    return self(kwargs, callbacks=callbacks, tags=tags, metadata=metadata)[
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 410, in __call__
+    return self.invoke(
+           ~~~~~~~~~~~^
+        inputs,
+        ^^^^^^^
+    ...<2 lines>...
+        include_run_info=include_run_info,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 165, in invoke
+    self._call(inputs, run_manager=run_manager)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\combine_documents\base.py", line 143, in _call
+    output, extra_return_dict = self.combine_docs(
+                                ~~~~~~~~~~~~~~~~~^
+        docs,
+        ^^^^^
+        callbacks=_run_manager.get_child(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **other_keys,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\combine_documents\stuff.py", line 263, in combine_docs
+    return self.llm_chain.predict(callbacks=callbacks, **inputs), {}
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 325, in predict
+    return self(kwargs, callbacks=callbacks)[self.output_key]
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 410, in __call__
+    return self.invoke(
+           ~~~~~~~~~~~^
+        inputs,
+        ^^^^^^^
+    ...<2 lines>...
+        include_run_info=include_run_info,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 165, in invoke
+    self._call(inputs, run_manager=run_manager)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 127, in _call
+    response = self.generate([inputs], run_manager=run_manager)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 139, in generate
+    return self.llm.generate_prompt(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        prompts,
+        ^^^^^^^^
+    ...<2 lines>...
+        **self.llm_kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 980, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 799, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1045, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 1441, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 231, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 222, in _chat_with_retry
+    raise e
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 206, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 44
+}
+]
+2025-07-30 16:10:32,833 - WARNING - Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+].
+2025-07-30 16:15:33,225 - ERROR - Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+Traceback (most recent call last):
+  File "D:\NTS_Tranning\chatbot\RAG-chatbot\app.py", line 86, in handle_user_query
+    answer = get_answer_from_vector_store(user_question, st.session_state.vector_store)
+  File "D:\NTS_Tranning\chatbot\RAG-chatbot\app.py", line 77, in get_answer_from_vector_store
+    return chain.run(input_documents=docs, question=query)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 632, in run
+    return self(kwargs, callbacks=callbacks, tags=tags, metadata=metadata)[
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 410, in __call__
+    return self.invoke(
+           ~~~~~~~~~~~^
+        inputs,
+        ^^^^^^^
+    ...<2 lines>...
+        include_run_info=include_run_info,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 165, in invoke
+    self._call(inputs, run_manager=run_manager)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\combine_documents\base.py", line 143, in _call
+    output, extra_return_dict = self.combine_docs(
+                                ~~~~~~~~~~~~~~~~~^
+        docs,
+        ^^^^^
+        callbacks=_run_manager.get_child(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **other_keys,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\combine_documents\stuff.py", line 263, in combine_docs
+    return self.llm_chain.predict(callbacks=callbacks, **inputs), {}
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 325, in predict
+    return self(kwargs, callbacks=callbacks)[self.output_key]
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\_api\deprecation.py", line 189, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 410, in __call__
+    return self.invoke(
+           ~~~~~~~~~~~^
+        inputs,
+        ^^^^^^^
+    ...<2 lines>...
+        include_run_info=include_run_info,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\base.py", line 165, in invoke
+    self._call(inputs, run_manager=run_manager)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 127, in _call
+    response = self.generate([inputs], run_manager=run_manager)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain\chains\llm.py", line 139, in generate
+    return self.llm.generate_prompt(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        prompts,
+        ^^^^^^^^
+    ...<2 lines>...
+        **self.llm_kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 980, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 799, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1045, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 1441, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 231, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 222, in _chat_with_retry
+    raise e
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_google_genai\chat_models.py", line 206, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\NTS-SakshiGupta\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+2025-07-30 16:20:54,447 - INFO - Answer: Hello! How can I assist you today?...
+2025-07-30 16:21:11,249 - INFO - Answer: There is no PDF provided. Please share the PDF or provide more context so I can assist you with summ...
+2025-07-30 16:21:35,967 - INFO - Loading faiss with AVX2 support.
+2025-07-30 16:21:36,114 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-30 16:21:36,136 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-30 16:27:50,226 - INFO - Loading faiss with AVX2 support.
+2025-07-30 16:27:50,357 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-30 16:27:50,377 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-08-01 00:26:13,779 - INFO - Loading faiss with AVX2 support.
+2025-08-01 00:26:14,210 - INFO - Successfully loaded faiss with AVX2 support.
+2025-08-01 00:26:14,241 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-08-01 12:47:21,798 - INFO - error_code=None error_message='You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 60000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)' error_param=None error_type=model_rate_limit message='Together API error received' stream_error=False
